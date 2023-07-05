@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import numbers
-F"the {numbers} Battery street "
+number = 98
+print(f"{number} Battery street\n")

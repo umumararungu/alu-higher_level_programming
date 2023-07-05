@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/bin/bash
 import py_compile
 import os
 
@@ -9,4 +9,3 @@ if py_file:
     py_compile.compile(py_file, cfile=output_file, doraise=True)
 else:
     print("Error: Environment variable PYFILE not set.")
-    

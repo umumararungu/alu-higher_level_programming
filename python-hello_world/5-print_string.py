@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print('"Programming is like building a multilingual puzzle')
+str = "Holberton School"
+print(str * 3)
+
+print(str[0,3])

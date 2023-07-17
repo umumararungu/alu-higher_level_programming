@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    sentence = "you are mine"
+    sentence = "Holberton is so cool"
     length, first = multiple_returns(sentence)
-    print("length: {:d} - first character: {}".format(length, first)
+    print("Length: {:d} - First character: {}".format(length, first))

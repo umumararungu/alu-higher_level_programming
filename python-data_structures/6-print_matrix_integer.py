@@ -1,1 +1,4 @@
-6-print_matrix_integer.py
+#!/usr/bin/python3
+def print_matrix_interger(matrix=[[]]):
+    for i in range(matrix):
+        print("d".format(matrix[[i]])

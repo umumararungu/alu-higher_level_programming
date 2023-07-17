@@ -2,5 +2,5 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     a = tuple_a + (0, 0)
     b = tuple_b + (0, 0)
-    sum_turple= (a[0] + b[0], a[1] + b[1])
+    sum_turple = (a[0] + b[0], a[1] + b[1])
     return sum_turple

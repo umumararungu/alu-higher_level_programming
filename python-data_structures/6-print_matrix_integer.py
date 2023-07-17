@@ -1,4 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_interger(matrix=[[]]):
-    for i in range(matrix):
-        print("{:d}".format(matrix[[i]])
+    for row in range(matrix):
+        for col in range(len(row)):
+            print("{:d}".format(row[i]), end="")
+            if col != len(row) -1:
+                print(" ", end="")
+        print()

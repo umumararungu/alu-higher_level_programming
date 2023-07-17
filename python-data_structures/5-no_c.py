@@ -2,6 +2,6 @@
 def no_c(my_string):
     replaced = ''
     for i in my_string:
-        if i.lower() != 'c':
-          replaced += i
+         if i.lower() != 'c':
+           replaced += i
     return replaced

@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if matrix != 0:
-        for row in matrix:
-            for col in row:
-                square = (matrix[col].pow(2))
-                return square
+    new_matrix = []
+    for row in matrix:
+        new_row = []
+        for col in row:
+            new_row.append(col ** 2)
+            new_matrix.append(new_row)
+    return new_matrix

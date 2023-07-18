@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def number_keys(a_dictionary):
+def print_sorted_dictionary(a_dictionary):
     return sorted(a_dictionary)

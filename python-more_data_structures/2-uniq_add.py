@@ -1,4 +1,9 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    uni = list(dict.fromkeys(my_list))
-    print("Result: {:d}".format(uni))
+    uni = set()
+    sum =0
+    for number in my_list:
+        if number not in uni:
+            uni.add(number)
+            sum += number
+    return sum

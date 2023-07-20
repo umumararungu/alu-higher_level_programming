@@ -6,9 +6,10 @@ class Square:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
 
+
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -29,9 +30,9 @@ class Square:
     @position.setter
     def position(self, value):
         if not isinstance(value, tuple) or len(value) != 2 or \
-           not all(isinstance(v, int) for v in value) or \
-           not all(v >= 0 for v in value):
-            raise TypeError("position must be a turple of 2 positive integers")
+           not all(isinstance(val, int) for val in value) or \
+           not all(val >= 0 for val in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):

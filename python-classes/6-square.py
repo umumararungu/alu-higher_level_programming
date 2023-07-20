@@ -21,6 +21,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     @property
     def position(self):
         return self.__position
@@ -28,7 +29,7 @@ class Square:
     @position.setter
     def position(self, value):
         if not isinstance(value, int):
-            raise TypeError("postion must be a turple of 2 positive integers")
+            raise TypeError("position must be a turple of 2 positive integers")
         self.__position = value
 
     def area(self):

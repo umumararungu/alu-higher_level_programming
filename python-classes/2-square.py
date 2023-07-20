@@ -8,9 +8,14 @@ class Square:
 
     def __init__(self, size=0):
         self._Square__size = size
-
-        try:
-            print(size)
-        except ValueError as e:
-            print(f"size must be >= 0")
+        if not isinstance(size, int):
+            try:
+                print(size)
+            except TypeError as e:
+                print(f"size must be integer")
+        if size < 0:
+            try:
+                print(size)
+            except ValueError as e:
+                print(f"size must be >= 0")
             

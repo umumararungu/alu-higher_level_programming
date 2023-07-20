@@ -13,4 +13,4 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
     def area(self):
-        print(Square().area())
+        print("Area: {}".format(self._Square__size.area()))

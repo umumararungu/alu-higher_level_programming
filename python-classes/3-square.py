@@ -12,5 +12,6 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-    def area(self):
-        print("Area: {}".format(self._Square__size.area()))
+    def area(self, x):
+        x = self._Square__size
+        print("Area: {}".format(x.area()))

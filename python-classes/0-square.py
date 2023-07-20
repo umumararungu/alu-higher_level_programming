@@ -2,5 +2,5 @@
 
 class Square:
     s = Square()
-    printi(s)
+    print(s)
 

@@ -5,8 +5,6 @@
 class Square:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
-
-
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position

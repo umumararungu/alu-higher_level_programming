@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
 class Square:
-    s = Square()
-    print(s)
-
+    my_suqare = Square()
+    print(type(mysquare))
+    print(mysquare.__dict__)

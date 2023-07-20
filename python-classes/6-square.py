@@ -41,4 +41,4 @@ class Square:
         elif self.__position[1] > 0:
             print("")
         else:
-            print(" ")
+            print("#" * self.__size)

@@ -29,6 +29,7 @@ class Square:
     def position(self, value):
         if not isinstance(value, int):
             raise TypeError("postion must be a turple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         return self.__size ** 2

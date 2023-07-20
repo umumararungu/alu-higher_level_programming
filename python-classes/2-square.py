@@ -8,9 +8,9 @@ class Square:
 
     def __init__(self, size=0):
         self._Square__size = size
-        if size < 0:
-            try:
-                print(size)
-            except ValueError as e:
-                print(f"size must be >= 0")
+
+        try:
+            print(size)
+        except ValueError as e:
+            print(f"size must be >= 0")
             

@@ -42,11 +42,13 @@ class Rectangle:
             return 0
         else:
             return (self.__width + self.__height) * 2
-
+    def __str__(self):
         if self.__width == 0 or self.__height == 0:
-            print(str())
-        else:
-            for row in range(self.__width):
-                for col in range(self.__height):
-                    print(str('#') * self.__height)
-                print(str('#') * self.__width)
+            return ""
+        rect_str = ""
+        for _ in range(self.__height):
+            rect_str += "#" * self.__width + "\n"
+        return rect_str.rstrip()
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.__width, self.__height)

@@ -8,15 +8,6 @@ class Rectangle:
     print_symbol = "#"
     number_of_instances = 0
 
-
-Here's the implementation of the Rectangle class based on the extended requirements:
-
-python
-Copy code
-class Rectangle:
-    number_of_instances = 0
-    print_symbol = '#'
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height

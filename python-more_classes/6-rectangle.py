@@ -5,10 +5,12 @@
 class Rectangle:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        number_of_instances += 1
 
     @property
     def width(self):
@@ -56,3 +58,5 @@ class Rectangle:
 
     def __del__(self):
         print(Rectangle.number_of_instances)
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1

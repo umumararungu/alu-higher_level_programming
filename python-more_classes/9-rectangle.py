@@ -8,6 +8,15 @@ class Rectangle:
     print_symbol = "#"
     number_of_instances = 0
 
+
+Here's the implementation of the Rectangle class based on the extended requirements:
+
+python
+Copy code
+class Rectangle:
+    number_of_instances = 0
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -38,29 +47,24 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
-        space = ""
-        if self.__width == 0 or self.__height == 0:
-            return space
-        for col in range(self.__height):
-            for row in range(self.__width):
-                space += str(self.print_symbol)
-            space += '\n'
-        return space[:-1]
+        if self.width == 0 or self.height == 0:
+            return ""
+        return '\n'.join(str(self.print_symbol) * self.width for _ in range(self.height))
 
     def __repr__(self):
-        new_rectangle = eval(repr(Rectangle))
-        return new_rectangle
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -75,5 +79,6 @@ class Rectangle:
         else:
             return rect_2
 
+    @classmethod
     def square(cls, size=0):
         return cls(size, size)

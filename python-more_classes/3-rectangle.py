@@ -41,13 +41,11 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        space = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rectangle_str = ""
-        for _ in range(self.__height):
-            rectangle_str += "#" * self.__width
-            rectangle_str += "\n"
-        return rectangle_str.rstrip()
-
-    def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+            return space
+        for col in range(self.__height):
+            for row in range(self.__width):
+                space += "#"
+            space += '\n'
+        return space[:-1]

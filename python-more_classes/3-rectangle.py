@@ -46,4 +46,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             print(str())
         else:
-            print(str('#') * perimeter())
+            for row in range(self.__width):
+                for col in range(self.__height):
+                    print(str('#') * self.__height)
+                print(str('#') * self.__width)  

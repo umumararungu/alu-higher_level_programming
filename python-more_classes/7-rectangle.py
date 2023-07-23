@@ -46,7 +46,7 @@ class Rectangle:
             return space
         for col in range(self.__height):
             for row in range(self.__width):
-                space += "#"
+                space += print_symbol()
             space += '\n'
         return space[:-1]
 

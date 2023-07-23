@@ -43,7 +43,7 @@ class Rectangle:
         else:
             return (self.__width + self.__height) * 2
 
-    if self.__width == 0 or self.__height == 0:
-        str()
-    else:
-        print(str('#') * perimeter())
+        if self.__width == 0 or self.__height == 0:
+            str()
+        else:
+            print(str('#') * perimeter())

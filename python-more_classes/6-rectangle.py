@@ -55,4 +55,4 @@ class Rectangle:
         return new_rectangle
 
     def __del__(self):
-        print(Rectangle.number_of_instance)
+        print(Rectangle.number_of_instances)

@@ -38,18 +38,16 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        else:
-            return (self.__width + self.__height) * 2
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_str = ""
+        rectangle_str = ""
         for _ in range(self.__height):
-            rect_str += "#" * self.__width + "\n"
-        return rect_str.rstrip()
+            rectangle_str += "#" * self.__width
+            rectangle_str += "\n"
+        return rectangle_str.rstrip()
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)

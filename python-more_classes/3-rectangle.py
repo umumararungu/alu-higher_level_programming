@@ -49,4 +49,4 @@ class Rectangle:
             for row in range(self.__width):
                 for col in range(self.__height):
                     print(str('#') * self.__height)
-                print(str('#') * self.__width)  
+                print(str('#') * self.__width)

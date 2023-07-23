@@ -58,7 +58,6 @@ class Rectangle:
         return new_rectangle
 
     def __del__(self):
-        print(Rectangle.number_of_instances)
         print("Bye rectangle...")
 
     def bigger_or_equal(rect_1, rect_2):

@@ -51,5 +51,5 @@ class Rectangle:
         return space[:-1]
 
     def __repr__(self):
-        new_rectangle = eval(repr(Rectangle))
+        new_rectangle = eval(Rectangle)
         return new_rectangle

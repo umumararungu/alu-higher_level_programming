@@ -52,4 +52,4 @@ class Rectangle:
         return rect_str.rstrip()
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+       print("Rectangle({}, {})".format(self.__width, self.__height))

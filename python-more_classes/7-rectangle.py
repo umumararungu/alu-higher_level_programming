@@ -5,6 +5,7 @@
 class Rectangle:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -46,7 +47,7 @@ class Rectangle:
             return space
         for col in range(self.__height):
             for row in range(self.__width):
-                space += print_symbol()
+                space += str(self.print_symbol)
             space += '\n'
         return space[:-1]
 

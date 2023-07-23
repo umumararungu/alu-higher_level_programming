@@ -55,4 +55,6 @@ class Rectangle:
         return new_rectangle
 
     def __del__(self):
-        print("Bye rectangle...")
+        for _ in range(Rectangle.number_of_instance):
+            print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+            print("Bye rectangle...")

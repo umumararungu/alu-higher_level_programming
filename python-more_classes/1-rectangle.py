@@ -6,11 +6,9 @@ class Rectangle:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
 
-
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
-
 
     @property
     def width(self):

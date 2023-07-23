@@ -46,4 +46,4 @@ class Rectangle:
     if self.__width == 0 or self.__height == 0:
         str()
     else:
-        str('#')
+        str('#') * perimeter()

@@ -69,5 +69,5 @@ class Rectangle:
         else:
             if rect_1 == rect_2 or rect_1 > rect_2:
                 return rect_1
-            if:
+            else:
                 return rect_2

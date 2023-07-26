@@ -22,7 +22,10 @@ class Rectangle(BaseGeometry):
     pass
 
     def __init__(self, width, height):
-        super().integer_validator(self, value="width")
-        super().integer_validator(self, value="height")
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.width = width
         self.height = height
+
+    def __str__(self):
+        return f"[Rectangle] {self.__width}/{self.height}"

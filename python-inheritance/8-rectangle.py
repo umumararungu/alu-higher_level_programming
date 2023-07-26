@@ -28,4 +28,4 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
 
     def __str__(self):
-        return f"[Rectangle] {self.__width}/{self.height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"

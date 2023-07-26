@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
-Square = __import__('10-square').Square
+Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""

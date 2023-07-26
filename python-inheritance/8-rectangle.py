@@ -3,6 +3,7 @@
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass

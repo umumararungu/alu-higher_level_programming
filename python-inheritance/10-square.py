@@ -3,6 +3,7 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass

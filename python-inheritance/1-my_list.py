@@ -3,7 +3,7 @@
 
 
 class Mylist(list):
-    '''python3 -c 'print(__import__("my_module").MyClass.__doc__)''''
+    '''python3 -c 'print(__import__("my_module").MyClass.__doc__)'''
     pass
  
     def append(self, value):

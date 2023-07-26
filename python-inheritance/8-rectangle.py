@@ -18,6 +18,8 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
+    pass
 
     def __init__(self, width, height):
         self.__width = width

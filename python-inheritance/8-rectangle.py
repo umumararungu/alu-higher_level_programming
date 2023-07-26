@@ -15,17 +15,17 @@ class BaseGeometry:
 
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
-        
+
 
 class Rectangle(BaseGeometry):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     pass
 
     def __init__(self, width, height):
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.width = width
-        self.height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.height}"

@@ -29,4 +29,4 @@ class Square(Rectangle):
         self.integer_validator("size", size)
 
     def __str__(self):
-        return f"[square] {self.__size}"
+        return f"[Square] {self.__size}"

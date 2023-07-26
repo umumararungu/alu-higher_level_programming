@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
+# class 'MyList' that inherits from 'list'
+"""
+    define a class 'MyList'
+"""
 
 
-class Mylist(list):
-    """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
-    pass
- 
-    def append(self, value):
-        super().append(value)
-        self.sort()
+class MyList(list):
+    """
+        implement sorted list
+    """
 
     def print_sorted(self):
+        """
+            prints sorted list
+        """
         print(sorted(self))

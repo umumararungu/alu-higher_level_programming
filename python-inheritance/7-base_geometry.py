@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
+"""Empty BaseGeometry class"""
 
 
 class BaseGeometry:
-    """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
-    pass
+    """Class Geometry"""
 
     def area(self):
-        raise Exception("area() is not implemented")
+        """Raises Exception only"""
+        raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-
+        """Integer validator if less than 0 or not int"""
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))

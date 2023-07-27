@@ -9,6 +9,7 @@ from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 
 def add_items_to_list(filename, *args):
+    """"python3 -c 'print(__import__("my_module").my_function.__doc__)'""""
     my_list = []
     if path.exists(filename):
         my_list = load_from_json_file(filename)

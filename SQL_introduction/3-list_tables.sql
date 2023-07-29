@@ -1,2 +1,2 @@
 -- list tables
-SELECT * from mysql;
+SELECT * FROM mysql;

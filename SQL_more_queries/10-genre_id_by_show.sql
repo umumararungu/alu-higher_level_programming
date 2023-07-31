@@ -1,4 +1,4 @@
--- TV_SHOWS
+-- tvshow
 CREATE DATABASE hbtn_0d_tvshows;
 mysql -u root -p hbtn_0d_tvshows < hbtn_0d_tvshows.sql
 SELECT tv_shows.title, tv_show_genres.genre_id

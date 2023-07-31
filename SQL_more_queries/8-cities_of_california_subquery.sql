@@ -1,2 +1,2 @@
 -- california cities
-SELECT cities.name,cities.id FROM cities,states ON state.id=cities.id WHERE states.name='Calfornia';
+SELECT id,name FROM cities WHERE states_id=( SELECT id FROM states WHERE name='Calfornia') ORDER BY id;

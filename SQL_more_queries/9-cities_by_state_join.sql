@@ -1,2 +1,5 @@
 -- cities and states
-SELECT cities.id AS id,cities.name AS name,states.name AS name FROM cities FULL JOIN states ORDER BY id ASC;
+SELECT cities.id, cities.name, states.name
+FROM cities
+JOIN states ON cities.state_id = states.id
+ORDER BY cities.id;

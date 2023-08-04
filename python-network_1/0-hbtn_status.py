@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 import urllib.request
-with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-    html =  response.read()
+if __name__ == "__main__":
+    request = urllib.request.Request("https://intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))

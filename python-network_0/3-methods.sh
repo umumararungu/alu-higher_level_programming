@@ -1,3 +1,3 @@
 #!/bin/bash
 #delete
-curl --head "$1"
+curl --HEAD "$1"

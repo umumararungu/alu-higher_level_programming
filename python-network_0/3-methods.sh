@@ -1,3 +1,3 @@
 #!/bin/bash
-#delete
-curl --HEAD "$1"
+#methods
+curl -sI "$1" | grep "Allow:" | cut -d " " -f2-

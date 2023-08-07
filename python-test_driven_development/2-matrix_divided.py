@@ -22,4 +22,4 @@ def matrix_divided(matrix, div):
 
     new_matrix = round((matrix / div), 2)
 
-    return new_matrix
+    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])

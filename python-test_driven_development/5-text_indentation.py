@@ -8,11 +8,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    suffix = [".", "?", ":"]
-
-    result = text.endswith(".")
-
-    if result == True:
+    if text.endswith(".") or text.endswith("?") or text.endswith(":"):
         print(text, "\n", "\n")
 
     else:

@@ -13,6 +13,6 @@ def text_indentation(text):
     s = '[?.:]'
     for i in range(len(text)):
         if text[i] in s:
-            print(text, "\n", "\n")
+            print("\n", "\n")
     else:
         print(text)

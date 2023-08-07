@@ -10,7 +10,7 @@ def text_indentation(text):
 
     suffix = [".", "?", ":"]
 
-    result = text.endswith(suffix)
+    result = text.endswith(".")
 
     if result == True:
         print(text, "\n", "\n")

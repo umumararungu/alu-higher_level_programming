@@ -99,8 +99,8 @@ class Rectangle(Base):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         for _ in range(self.__height):
             print("#" * self.__width)
-        for _ in range(self.__x):
-            print("#" * self.__y)
+        for _ in range(self.__y):
+            print("#" * self.__x)
 
     def __str__(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""

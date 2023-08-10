@@ -7,7 +7,7 @@ from models.base import Base
 class Rectangle(Base):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
 
-        def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
 
         super().__init__(id)

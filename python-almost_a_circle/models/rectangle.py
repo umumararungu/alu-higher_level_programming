@@ -11,10 +11,10 @@ class Rectangle(Base):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
 
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     # getter method
     def get_width(self):

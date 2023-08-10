@@ -97,7 +97,7 @@ class Rectangle(Base):
 
     def display(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        for i in range(x):
+        for i in range(self.x):
             for j in range(y):
                 print("#", end="")
         print("")

@@ -26,6 +26,10 @@ class Rectangle(Base):
     def width(self, width):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__width = width
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be > 0")
 
     @property
     def height(self):
@@ -36,6 +40,10 @@ class Rectangle(Base):
     def height(self, height):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__height = height
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be > 0")      
 
     @property
     def x(self):
@@ -46,6 +54,10 @@ class Rectangle(Base):
     def x(self, x):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__x = x
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be > 0")
 
     @property
     def y(self):
@@ -56,6 +68,10 @@ class Rectangle(Base):
     def y(self, y):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__y = y
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be > 0")
 
 if __name__ == "__main__":
 
@@ -67,3 +83,25 @@ if __name__ == "__main__":
 
     r3 = Rectangle(10, 2, 0, 0, 12)
     print(r3.id)
+
+    try:
+        Rectangle(10, "2")
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        r = Rectangle(10, 2)
+        r.width = -10
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        r = Rectangle(10, 2)
+        r.x = {}
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        Rectangle(10, 2, 3, -1)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))

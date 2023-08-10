@@ -93,7 +93,7 @@ class Rectangle(Base):
 
     def area(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return ((Rectangle.__width) * (Rectangle.__height))
+        return (width * height)
 
 if __name__ == "__main__":
 

@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
 
@@ -30,7 +31,7 @@ class Rectangle(Base):
     def height(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__height
-    
+
     @height.setter
     def height(self, height):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
@@ -40,6 +41,7 @@ class Rectangle(Base):
     def x(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__x
+
     @x.setter
     def x(self, x):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""

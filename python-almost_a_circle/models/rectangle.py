@@ -50,10 +50,10 @@ class Rectangle(Base):
     @property
     def y(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.__y
+        return self.__x
 
-    @y.setter
-    def set_y(self, y):
+    @x.setter
+    def y(self, y):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__y = y
 

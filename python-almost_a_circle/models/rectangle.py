@@ -16,38 +16,41 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    # getter method
-    def get_width(self):
+    @property
+    def width(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.get__width
-    # setter method
-    def set_width(self, width):
+        return self.__width
+
+    @width.setter
+    def width(self, width):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__width = width
 
-    # getter method
-    def get_height(self):
+    @property
+    def height(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.get__height
-    # setter method
-    def set_height(self, height):
+        return self.__height
+    
+    @height.setter
+    def height(self, height):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__height = height
 
-    # getter method
-    def get_x(self):
+    @property
+    def x(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.get__x
-    # setter method
-    def set_x(self, x):
+        return self.__x
+    @x.setter
+    def x(self, x):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__x = x
 
-    # getter method
+    @property
     def get_y(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.get__y
-    # setter method
+        return self.__y
+
+    @y.setter
     def set_y(self, y):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__y = y

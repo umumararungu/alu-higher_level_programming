@@ -52,7 +52,7 @@ class Rectangle(Base):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, y):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         self.__y = y

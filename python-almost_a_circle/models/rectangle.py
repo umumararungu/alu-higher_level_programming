@@ -92,6 +92,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
     def area(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return ((Rectangle.__width) * (Rectangle.__height))
 
 if __name__ == "__main__":

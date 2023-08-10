@@ -95,6 +95,12 @@ class Rectangle(Base):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.width * self.height
 
+    def display(self):
+        for i in range(x):
+            for j in range(y):
+                print("#", end="")
+        print("")
+
 if __name__ == "__main__":
 
     r1 = Rectangle(10, 2)
@@ -136,3 +142,11 @@ if __name__ == "__main__":
 
     r3 = Rectangle(8, 7, 0, 0, 12)
     print(r3.area())
+
+    r1 = Rectangle(4, 6)
+    r1.display()
+
+    print("---")
+
+    r1 = Rectangle(2, 2)
+    r1.display()

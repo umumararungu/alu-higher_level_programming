@@ -21,6 +21,8 @@ class Rectangle(Base):
     def width(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__width
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
 
     @width.setter
     def width(self, width):
@@ -35,6 +37,8 @@ class Rectangle(Base):
     def height(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__height
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
 
     @height.setter
     def height(self, height):
@@ -49,6 +53,8 @@ class Rectangle(Base):
     def x(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__x
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
 
     @x.setter
     def x(self, x):
@@ -65,6 +71,8 @@ class Rectangle(Base):
     def y(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__y
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
 
     @y.setter
     def y(self, y):

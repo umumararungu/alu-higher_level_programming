@@ -100,6 +100,10 @@ class Rectangle(Base):
         for _ in range(self.__height):
             print("#" * self.__width)
 
+    def __str__(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
+        return ((self.x / self.y) - (self.width / self.height))
+
 if __name__ == "__main__":
 
     r1 = Rectangle(10, 2)

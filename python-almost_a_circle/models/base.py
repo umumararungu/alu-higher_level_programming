@@ -2,7 +2,7 @@
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
 
-class base:
+class Base:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
 
     __nb_objects = 0

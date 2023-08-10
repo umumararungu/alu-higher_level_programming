@@ -102,7 +102,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return [Rectangle] (self.id) (self.x / self.y) - (self.width / self.height))
+        return Rectangle (self.id) (self.x / self.y) - (self.width / self.height))
 
 if __name__ == "__main__":
 

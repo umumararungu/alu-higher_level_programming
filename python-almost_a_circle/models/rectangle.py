@@ -46,7 +46,7 @@ class Rectangle(Base):
         self.__x = x
 
     @property
-    def get_y(self):
+    def y(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         return self.__y
 

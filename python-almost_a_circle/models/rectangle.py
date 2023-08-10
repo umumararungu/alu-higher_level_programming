@@ -96,6 +96,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         for i in range(x):
             for j in range(y):
                 print("#", end="")

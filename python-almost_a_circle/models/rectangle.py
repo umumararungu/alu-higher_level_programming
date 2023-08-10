@@ -107,7 +107,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height
         )
-    
+
     def update(self, *args):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
         if len(args) > 0:

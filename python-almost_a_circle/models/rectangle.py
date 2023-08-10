@@ -50,7 +50,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        return self.__x
+        return self.__y
 
     @x.setter
     def y(self, y):

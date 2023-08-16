@@ -23,38 +23,7 @@ class Square(Rectangle):
             self.id, self.__x, self.__y, self.__width, self.__height
         )
     
-    @property
-    def size(self, value):
-        """python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-        self.width = value
-        self.height = value
 
-    def update(self, *args, **kwargs):
-        """ Update attributes with keyworded arguments """
-        if args:
-            if len(args) >= 1:
-                self.id = args[0]
-            if len(args) >= 2:
-                self.size = args[1]
-            if len(args) >= 3:
-                self.x = args[2]
-            if len(args) >= 4:
-                self.y = args[3]
-        else:
-            for key, value in kwargs.items():
-                if key == "size":
-                    self.size = value
-                else:
-                    setattr(self, key, value)
-
-    def to_dictionary(self):
-        """ Return the dictionary representation of Square """
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y
-        }
 
 if __name__ == "__main__":
 

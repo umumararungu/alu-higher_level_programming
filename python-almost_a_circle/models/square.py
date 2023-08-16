@@ -3,7 +3,6 @@
 
 from models.rectangle import Rectangle
 
-
 class Square(Rectangle):
     """ Represents a Square, a special case of Rectangle """
 
@@ -11,8 +10,7 @@ class Square(Rectangle):
         """ Initializes a Square instance """
         super().__init__(size, size, x, y, id)
 
-    
-@property
+    @property
     def size(self):
         """ Getter method for size """
         return self.width
@@ -38,8 +36,3 @@ if __name__ == "__main__":
         s1.size = "9"
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
-
-    s1 = Square(5)
-    print(s1)
-    print(s1.area())
-    s1.display()

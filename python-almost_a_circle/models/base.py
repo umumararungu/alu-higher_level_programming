@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
+import json
+
 
 class Base:
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
@@ -50,6 +52,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ Returns the JSON string representation of list_dictionaries """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
 
 if __name__ == "__main__":
 
@@ -76,3 +84,11 @@ if __name__ == "__main__":
 
     r3 = Rectangle(10, 2, 0, 0, 12)
     print(r3.id)
+
+    r1 = Rectangle(10, 7, 2, 8)
+    dictionary = r1.to_dictionary()
+    json_dictionary = Base.to_json_string([dictionary])
+    print(dictionary)
+    print(type(dictionary))
+    print(json_dictionary)
+    print(type(json_dictionary))

@@ -1,63 +1,53 @@
 #!/usr/bin/python3
-""" Defines a Square class that inherits from Rectangle """
+""" Defines a Rectangle class """
 
-from models.rectangle import Rectangle
+class Rectangle:
+    """ Represents a Rectangle """
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initializes a Rectangle instance """
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        self.id = id
 
-class Square(Rectangle):
-    """ Represents a Square, a special case of Rectangle """
+    def area(self):
+        """ Returns the area of the rectangle """
+        return self.width * self.height
 
-    def __init__(self, size, x=0, y=0, id=None):
-        """ Initializes a Square instance """
-        super().__init__(size, size, x, y, id)
-
-    @property
-    def size(self):
-        """ Getter method for size """
-        return self.width
-
-    @size.setter
-    def size(self, value):
-        """ Setter method for size """
-        self.width = value
-        self.height = value
-
-    def update(self, *args, **kwargs):
-        """ Updates attributes of the Square """
-        if args and len(args) > 0:
-            attrs = ["id", "size", "x", "y"]
-            for i, arg in enumerate(args):
-                setattr(self, attrs[i], arg)
-        else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+    def display(self):
+        """ Prints the rectangle with '#' characters """
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
     def __str__(self):
-        """ Returns a string representation of the Square """
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
+        """ Returns a string representation of the rectangle """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
+
+    def to_dictionary(self):
+        """ Returns the dictionary representation of a Rectangle """
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'width': self.width,
+            'height': self.height
+        }
 
 if __name__ == "__main__":
-    s1 = Square(5)
-    print(s1)
+    r1 = Rectangle(10, 2, 1, 9)
+    print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
 
-    s1.update(10)
-    print(s1)
-
-    s1.update(1, 2)
-    print(s1)
-
-    s1.update(1, 2, 3)
-    print(s1)
-
-    s1.update(1, 2, 3, 4)
-    print(s1)
-
-    s1.update(x=12)
-    print(s1)
-
-    s1.update(size=7, y=1)
-    print(s1)
-
-    s1.update(size=7, id=89, y=1)
-    print(s1)
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)

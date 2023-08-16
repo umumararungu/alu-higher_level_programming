@@ -124,6 +124,15 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """ Returns the dictionary representation of a Rectangle """
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'width': self.width,
+            'height': self.height
+        }
 
 if __name__ == "__main__":
 
@@ -198,3 +207,15 @@ if __name__ == "__main__":
 
     r1.update(89, 2, 3, 4, 5)
     print(r1)
+
+    r1 = Rectangle(10, 2, 1, 9)
+    print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
+
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)

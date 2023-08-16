@@ -17,6 +17,7 @@ class Base:
             self.id = Base.__nb_objects
 
 class Rectangle(Base):
+       """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
     #getter method
     def get_width(self):
         return self.get__width

@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Represents a Square, a special case of Rectangle """
 
@@ -33,7 +34,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Returns a string representation of the Square """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
 
 if __name__ == "__main__":
     s1 = Square(5)

@@ -1,50 +1,88 @@
 #!/usr/bin/python3
-""" Defines a Square class that inherits from Rectangle """
+"""Create a Square class for the work"""
+
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Represents a Square, a special case of Rectangle """
-
+    """Create a Square class for the work"""
     def __init__(self, size, x=0, y=0, id=None):
-        """ Initializes a Square instance """
+        """
+        Create a Square class for the work
+
+        :param size: The size of the square
+        :param x: The x coordinate of the square
+        :param y: The y coordinate of the square
+        :param id: The id of the square
+        """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """ Getter method for size """
+        """
+        Return the size of the square
+
+        :return: The size of the square
+        """
         return self.width
 
     @size.setter
     def size(self, value):
-        """ Setter method for size """
+        """
+        Set the size of the square
+
+        :param value: The size of the square
+        """
         self.width = value
         self.height = value
 
-    def to_dictionary(self):
-        """ Returns the dictionary representation of a Square """
-        return {
-            'id': self.id,
-            'size': self.size,
-            'x': self.x,
-            'y': self.y
-        }
-
     def __str__(self):
-        """ Returns a string representation of the Square """
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
+        """
+        Return the string representation of the square
 
-if __name__ == "__main__":
-    s1 = Square(10, 2, 1)
-    print(s1)
-    s1_dictionary = s1.to_dictionary()
-    print(s1_dictionary)
-    print(type(s1_dictionary))
+        :return: The string representation of the square
+        """
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
-    s2 = Square(1, 1)
-    print(s2)
-    s2.update(**s1_dictionary)
-    print(s2)
-    print(s1 == s2)
+    def update(self, *args, **kwargs):
+        """
+        Update the square
+
+        :return: The updated square
+        """
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
+
+        elif len(kwargs) != 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            else:
+                self.id
+
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            else:
+                self.size
+
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            else:
+                self.x
+
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """
+        Return a dictionary representation of the square
+
+        :return: The dictionary representation of the square
+        """
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}

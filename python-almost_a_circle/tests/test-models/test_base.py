@@ -393,4 +393,3 @@ class TestBase_load_from_file(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

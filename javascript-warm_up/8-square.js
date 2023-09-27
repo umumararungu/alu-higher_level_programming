@@ -5,7 +5,7 @@ if (isNaN(argument)) {
   console.log('Missing size');
 } else {
   for (let row = 1; row <= argument; row++) {
-    for (let col = 1; col >= row; col++)
+    for (let col = 1; col <S= row; col++)
     console.log('x');
   }
   console.log('x');

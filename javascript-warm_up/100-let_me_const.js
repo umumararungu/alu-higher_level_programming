@@ -4,5 +4,5 @@ const MyVar = {
     value: 12
   };
 MyVar.value = 333;
-console.log(object);
+console.log(MyVar);
   

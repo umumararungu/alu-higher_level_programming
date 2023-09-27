@@ -10,4 +10,3 @@ if (isNaN(argument)) {
   }
   console.log('x');
 }
-}

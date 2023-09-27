@@ -1,8 +1,4 @@
 #!/usr/bin/node
-const MyVar = {
-    type: 'object',
-    value: 12
-  };
-MyVar.value = 333;
-console.log(MyVar);
-  
+myVar = 89;
+require('./100-let_me_const.js');
+console.log(myVar);

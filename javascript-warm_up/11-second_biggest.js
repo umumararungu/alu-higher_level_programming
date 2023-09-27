@@ -3,7 +3,7 @@
 function secondLargest (arr) {
   if (arr.length <= 1) {
     return 0;
-    }
+  }
   arr = arr.map(Number).sort((a, b) => b - a);
   return arr[1];
 }

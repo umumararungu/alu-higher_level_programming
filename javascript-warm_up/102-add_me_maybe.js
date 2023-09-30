@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 function addMeMaybe (number, theFunction) {
- console.log('New number: ' + number)
+  number += 1;
+  theFunction(number);
 }
 
 module.exports = {

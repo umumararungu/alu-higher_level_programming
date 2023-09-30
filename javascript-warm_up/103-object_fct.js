@@ -2,11 +2,12 @@
 
 const myObject = {
     type: 'object',
-    value: 12
+    value: 12,
+    incr : function() {
+      this.value += 1;
+    }
   };
-number === myObject.value
-  function incr (number, theFunction) {
-    number += 1;
-    theFunction(number);
-  }
-console.log(incr)
+
+console.log(myObject);
+myObject.incr();
+console.log(myObject);

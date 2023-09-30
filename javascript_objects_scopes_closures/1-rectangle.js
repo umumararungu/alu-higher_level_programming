@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-  width
+  width;
   height;
   constructor(w, h) {
     this.width = w;

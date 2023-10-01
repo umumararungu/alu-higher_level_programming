@@ -1,7 +1,7 @@
 #!/usr/bin/node
 class Rectangle {
-    width;
-    height;
+  width;
+  height;
     constructor(w, h) {
       if (w <= 0 || h <= 0 || w === undefined || h === undefined) {
         return;
@@ -28,7 +28,7 @@ class Rectangle {
       exchange = this.width;
       this.width = this.height;
       this.height = exchange;
-    }
   }
+}
   
-  module.exports = Rectangle;
+module.exports = Rectangle;

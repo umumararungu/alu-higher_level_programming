@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const fs = require('fs');
-fs.readFile(process.argv[2], (err, contents) => {
-  err ? console.log(err) : console.log(contents.toString());
+const req = require('request');
+req.get(process.argv[2], (err, res) => {
+  err ? console.log(err) : console.log('code: ' + res.statusCode);
 });

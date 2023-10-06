@@ -1,6 +1,5 @@
 #!/home/codespace/nvm/current/bin/node
 const fs = require('fs');
-const path = process.argv[2];
-fs.readFile('path', 'utf-8', function (error, content) {
-  console.log(error || content);
+fs.readFile(process.argv[2], (err, contents) => {
+  err ? console.log(err) : console.log(contents.toString());
 });

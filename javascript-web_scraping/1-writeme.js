@@ -1,2 +1,2 @@
 #!/usr/bin/node
-console.log('why now')
+console.log('why now');
